@@ -13,6 +13,14 @@
 // so every new derivation or store-path goes to upper
 // and is lost on umount
 
+// note: the overlay will be disabled on reboot
+// todo: after reboot, the user should run:
+// sudo nix-store --verify --repair
+// and maybe:
+// sudo rm -rf /a /b
+
+// todo: patch "nix-build" to show a warning before running
+
 // global state
 let isVerbose = false;
 
