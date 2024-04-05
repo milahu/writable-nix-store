@@ -27,8 +27,8 @@ let isVerbose = false;
 const commandList = ['start', 'stop', 'status'];
 
 function main(argv) {
-  const scriptName = 'writable-nix-store/index.js';
-  var args = argv.slice(1); // argv0 is index.js
+  const scriptName = 'writable-nix-store';
+  var args = argv.slice(1); // argv0 is writable-nix-store.js
 
   if (args[0] == '--verbose') {
     isVerbose = true;
