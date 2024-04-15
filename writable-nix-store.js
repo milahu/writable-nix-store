@@ -13,6 +13,16 @@
 // so every new derivation or store-path goes to upper
 // and is lost on umount
 
+// this is intentional and can not be optimized.
+// as soon as the overlay is mounted
+// all processes (including nix-build)
+// see the modified version of /nix/store.
+// so all new derivations built by nix-build are dirty
+// and should not be written to the actual /nix/store.
+// in theory, the only thing that could be optimized
+// is fetching derivations from binary caches
+// but that would require patching of nix
+
 // note: the overlay will be disabled on reboot
 // todo: after reboot, the user should run:
 // sudo nix-store --verify --repair
