@@ -312,7 +312,7 @@ function stopOverlayfs(lowerDir, overlayBase) {
   }
   console.log(`overlay stopped`);
   console.log(``);
-  console.log(`you may need to run this to fix your store:`);
+  console.log(`you may need to run this to fix "error: getting status of '/nix/store/...': No such file or directory":`);
   console.log(`sudo nix-store --verify --repair`);
   console.log(``);
   console.log(`to remove the patched files:`);
